@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>출석부</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>출석부</h1>
+    <form action="{{ url_for('mark_attendance') }}" method="post">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit" class="btn">출석 등록</button>
+    </form>
+    <br>
+    <a href="{{ url_for('attendance_list') }}" class="btn">출석 조회</a>
+</body>
+</html>
+
